@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { ArtisanServiceService } from '../artisan-service.service';
 
 @Component({
   selector: 'app-artisan',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ArtisanComponent implements OnInit {
 
-  constructor() { }
+  id;
+  constructor(private _Activatedroute: ActivatedRoute, private artisanService: ArtisanServiceService) { }
+
+  artisanName;
+  artisanDescription;
 
   ngOnInit(): void {
+    this._Activatedroute.paramMap.subscribe(params => {
+      this.id = params.get('id');
+  });
+  
+    this.artisanService.getArtisan(this.id).subscribe((data: any[]) => {
+    console.log(data);
+    this.artisanName = data['artisan_name'];
+    this.artisanDescription = data['artisan_description'];
+  });
   }
 
 }
