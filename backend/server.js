@@ -123,3 +123,21 @@ function handleError(res, reason, message, code) {
         }
     });
   });
+
+const deepai = require('deepai');
+deepai.setApiKey('8de794df-a945-49c8-8bc2-04d3b2fd7f60');
+
+app.get("/api/compareImages", async function(req, res){
+    var image1 = req.query.image1;
+    var image2 = req.query.image2;
+    try {
+        var resp = await deepai.callStandardApi("image-similarity", {
+            image1: image1,
+            image2: image2,
+          });
+        res.status(200).json(resp);
+    } catch (err) {
+        handleError(res, err.message, "DeepAI Error");
+    }
+});
+

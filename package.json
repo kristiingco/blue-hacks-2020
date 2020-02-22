@@ -22,6 +22,7 @@
     "body-parser": "^1.19.0",
     "bootstrap": "^4.4.1",
     "cors": "^2.8.5",
+    "deepai": "^1.0.15",
     "express": "^4.17.1",
     "mongoose": "^5.9.2",
     "rxjs": "~6.5.4",
