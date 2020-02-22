@@ -15,6 +15,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { AddToCartButtonComponent } from './add-to-cart-button/add-to-cart-button.component';
 import { ItemAddedComponent } from './item-added/item-added.component';
+import { HttpClientModule } from '@angular/common/http'; 
+
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { ItemAddedComponent } from './item-added/item-added.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

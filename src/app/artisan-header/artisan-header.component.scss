@@ -4,7 +4,19 @@ div {
     background-color: #5bc0eb;
     color: white;
     margin: -10px;
-    padding: 10px;
+    padding: 15px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
+    text-align: center;
+}
+
+app-back-button {
+    float: left;
+}
+
+h1 {
+    display: inline;
+    font-size: 23px;
+    margin-left: -12px;
+    
 }
