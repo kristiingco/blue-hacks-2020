@@ -10,6 +10,8 @@ import { ArtisanComponent } from './artisan/artisan.component';
 import { ArtisanHeaderComponent } from './artisan-header/artisan-header.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { ArtisanDescriptionComponent } from './artisan-description/artisan-description.component';
+import { ProductSectionComponent } from './product-section/product-section.component';
+import { ProductCardComponent } from './product-card/product-card.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ArtisanDescriptionComponent } from './artisan-description/artisan-descr
     ArtisanComponent,
     ArtisanHeaderComponent,
     BackButtonComponent,
-    ArtisanDescriptionComponent
+    ArtisanDescriptionComponent,
+    ProductSectionComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
