@@ -6,11 +6,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ArtisanServiceService {
 
-  questionUrl = 'http://localhost:3000/api/artisanById';
+  questionUrl1 = 'http://localhost:3000/api/artisanById';
+  questionUrl2 = 'http://localhost:3000/api/productByArtisan';
 
   constructor(private httpClient: HttpClient) { }
 
   public getArtisan(id) {
-    return this.httpClient.get(this.questionUrl + '?artisan_id=' + id);
+    return this.httpClient.get(this.questionUrl1 + '?artisan_id=' + id);
+  }
+
+  public getArtisanProducts(id) {
+    return this.httpClient.get(this.questionUrl2 + '?artisan_id=' + id);
   }
 }

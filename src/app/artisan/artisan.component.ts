@@ -14,17 +14,22 @@ export class ArtisanComponent implements OnInit {
 
   artisanName;
   artisanDescription;
+  artisanProducts;
 
   ngOnInit(): void {
     this._Activatedroute.paramMap.subscribe(params => {
       this.id = params.get('id');
   });
-  
     this.artisanService.getArtisan(this.id).subscribe((data: any[]) => {
-    console.log(data);
     this.artisanName = data['artisan_name'];
     this.artisanDescription = data['artisan_description'];
   });
+
+    this.artisanService.getArtisanProducts(this.id).subscribe((data: any[]) => {
+    console.log(data);
+    this.artisanProducts = data;
+  });
+
   }
 
 }

@@ -1,8 +1,11 @@
 <div>
 <h1>Products</h1>
-<div style="display:flex; flex-wrap:wrap; width: 500px;">
-<app-product-card [routerLink]="['/product', '1']"></app-product-card>
-<app-product-card></app-product-card>
-<app-product-card></app-product-card>
+<div style="display: flex; flex-wrap: wrap; width: 500px;">
+<span *ngFor="let product of artisanProducts">
+<app-product-card
+[routerLink]="['/product', product['product_id']]"
+[productId]="product['product_id']"
+></app-product-card>
+</span>
 </div>
 </div>
