@@ -14,6 +14,7 @@ import { ProductSectionComponent } from './product-section/product-section.compo
 import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { AddToCartButtonComponent } from './add-to-cart-button/add-to-cart-button.component';
+import { ItemAddedComponent } from './item-added/item-added.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AddToCartButtonComponent } from './add-to-cart-button/add-to-cart-butto
     ProductSectionComponent,
     ProductCardComponent,
     ProductPageComponent,
-    AddToCartButtonComponent
+    AddToCartButtonComponent,
+    ItemAddedComponent
   ],
   imports: [
     BrowserModule,
