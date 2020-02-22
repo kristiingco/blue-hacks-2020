@@ -109,7 +109,7 @@ function handleError(res, reason, message, code) {
   });
 
   /*  "/api/productByArtisan"
-   *    GET: returns artisans that created the product
+   *    GET: returns products that the artisan created
    *    Required Params: 
    *    artisan_id=int
    */
