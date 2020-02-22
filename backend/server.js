@@ -158,8 +158,8 @@ app.get("/api/compareImages", async function(req, res){
 
 app.get("/api/compareImageList", async function(req, res){
     var image = req.query.image;
-    var imageList = JSON.parse(req.query.image_list);
-    var productIdList = JSON.parse(req.query.product_id_list);
+    var imageList = req.query.image_list.split(',');
+    var productIdList = req.query.product_id_list.split(',');
     var productList = new Object();
     productList.data = [];
 
