@@ -141,3 +141,47 @@ app.get("/api/compareImages", async function(req, res){
     }
 });
 
+  /*  "/api/compareImageList"
+   *    GET: returns the closest product to the image sent
+
+   *    Required Params: 
+   *    image = url string of user image sent
+   *    image_list = list of url strings to be compared
+   *    product_id_list = list of product ids 
+   *    
+   *    Return: JSON of {image_id:x, product_id:y, distance:z}
+   * 
+   *    NOTE:
+   *    image_list and product_id_list must be same length
+   *    image_list[0] must correspond to product_id_list[0] and so on
+   */
+
+app.get("/api/compareImageList", async function(req, res){
+    var image = req.query.image;
+    var imageList = JSON.parse(req.query.image_list);
+    var productIdList = JSON.parse(req.query.product_id_list);
+    var productList = new Object();
+    productList.data = [];
+
+    try {
+        for(var i = 0; i < imageList.length; i++){
+                var resp = await deepai.callStandardApi("image-similarity", {
+                    image1: image,
+                    image2: imageList[i],
+                });
+                productList["data"].push({image_id: imageList[i], product_id: productIdList[i], distance: resp.output.distance});
+        }
+        console.log(productList);
+        productList["data"].sort(function(a, b){
+            return a.distance - b.distance;
+        });
+        res.status(200).json(productList["data"][0]);
+        
+    }
+    catch (err) {
+        console.log("BYE");
+        handleError(res, err.message, "DeepAI Error");
+    }
+});
+
+
