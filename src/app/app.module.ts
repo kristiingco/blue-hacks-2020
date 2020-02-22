@@ -12,6 +12,7 @@ import { BackButtonComponent } from './back-button/back-button.component';
 import { ArtisanDescriptionComponent } from './artisan-description/artisan-description.component';
 import { ProductSectionComponent } from './product-section/product-section.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     BackButtonComponent,
     ArtisanDescriptionComponent,
     ProductSectionComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductPageComponent
   ],
   imports: [
     BrowserModule,
