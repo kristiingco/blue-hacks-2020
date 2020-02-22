@@ -13,6 +13,7 @@ import { ArtisanDescriptionComponent } from './artisan-description/artisan-descr
 import { ProductSectionComponent } from './product-section/product-section.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { AddToCartButtonComponent } from './add-to-cart-button/add-to-cart-button.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProductPageComponent } from './product-page/product-page.component';
     ArtisanDescriptionComponent,
     ProductSectionComponent,
     ProductCardComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    AddToCartButtonComponent
   ],
   imports: [
     BrowserModule,
