@@ -166,7 +166,7 @@ app.get("/api/compareImageList", async function(req, res){
     try {
         for(var i = 0; i < imageList.length; i++){
                 var resp = await deepai.callStandardApi("image-similarity", {
-                    image1: document.getElementById(image),
+                    image1: image,
                     image2: imageList[i],
                 });
                 productList["data"].push({image_id: imageList[i], product_id: productIdList[i], distance: resp.output.distance});
