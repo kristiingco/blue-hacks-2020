@@ -9,6 +9,7 @@ import { LocationMarkerComponent } from './location-marker/location-marker.compo
 import { ArtisanComponent } from './artisan/artisan.component';
 import { ArtisanHeaderComponent } from './artisan-header/artisan-header.component';
 import { BackButtonComponent } from './back-button/back-button.component';
+import { ArtisanDescriptionComponent } from './artisan-description/artisan-description.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BackButtonComponent } from './back-button/back-button.component';
     LocationMarkerComponent,
     ArtisanComponent,
     ArtisanHeaderComponent,
-    BackButtonComponent
+    BackButtonComponent,
+    ArtisanDescriptionComponent
   ],
   imports: [
     BrowserModule,
