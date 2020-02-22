@@ -7,6 +7,7 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
 import { MapComponent } from './map/map.component';
 import { LocationMarkerComponent } from './location-marker/location-marker.component';
 import { ArtisanComponent } from './artisan/artisan.component';
+import { ArtisanHeaderComponent } from './artisan-header/artisan-header.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ArtisanComponent } from './artisan/artisan.component';
     MainMenuComponent,
     MapComponent,
     LocationMarkerComponent,
-    ArtisanComponent
+    ArtisanComponent,
+    ArtisanHeaderComponent
   ],
   imports: [
     BrowserModule,
