@@ -1,3 +1,6 @@
+<app-shopping-cart-icon
+[routerLink]="['/cart']"></app-shopping-cart-icon>
+
 <div>
     <app-back-button></app-back-button>
     <img src={{currentProduct.img_url}}>
@@ -6,4 +9,4 @@
     <p>{{currentProduct.description}}</p>
     <app-add-to-cart-button (click)="addItem()"></app-add-to-cart-button>
 
-    </div>
+</div>

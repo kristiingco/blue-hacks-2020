@@ -22,5 +22,20 @@ img {
     align-items: center;
   }
 
+  .align-left {
+    float: left;
+  }
+  .align-right {
+    float: right;
+  }
+
+  .pay-button {
+    background-color: #9bc53d;
+    text-align: center;
+    border-radius: 30px;
+    padding: 15px;
+    font-size: 20px;
+}
+
 
   

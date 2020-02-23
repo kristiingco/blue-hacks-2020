@@ -30,11 +30,15 @@
             
         </mat-card-header>
         <mat-card-content>
-            <br/>Sub-Total:
-            <br/>Administrative Costs: 
-            <br/>Shipping Costs:
-            <br/>Total:
+            <p class="align-left">Sub-Total: </p> <p class="align-right">{{getSubTotal()}}</p>
+            <br/><br/><p class="align-left">Administrative Costs: </p> <p class="align-right">{{adminCost}}</p>
+            <br/><br/><p class="align-left">Shipping Costs: </p> <p class="align-right">{{shippingCost}}</p>
+            <br/><br/><p class="align-left">Total: </p> <p class="align-right">{{getTotal()}}</p>
+
         </mat-card-content>
+        <div class="pay-button">
+            Pay now
+        </div>
 
     </mat-card>
 </div>

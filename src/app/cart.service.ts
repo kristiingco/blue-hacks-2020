@@ -12,7 +12,17 @@ export class CartService {
   constructor() { }
 
   addItemToCart(p: product){
-    this.cart.push(p);
+    let found = false;
+    //check if item is in cart already and increase quantity instead
+    for(var prod of this.cart){
+      console.log(p);
+      console.log(prod);
+      if(prod.productID == p.productID){
+        prod.qty_ordered++;
+        found = true;
+      }
+    }
+    if(!found) this.cart.push(p);
   }
 
   getCart(){
