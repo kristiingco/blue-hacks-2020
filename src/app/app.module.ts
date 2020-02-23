@@ -17,10 +17,13 @@ import { AddToCartButtonComponent } from './add-to-cart-button/add-to-cart-butto
 import { ItemAddedComponent } from './item-added/item-added.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { ShoppingCartIconComponent } from './shopping-cart-icon/shopping-cart-icon.component';
-import { HttpClientModule } from '@angular/common/http'; 
 import { MatCardModule } from '@angular/material/card';
 import { SearchIconComponent } from './search-icon/search-icon.component';
 import { CartService } from './cart.service';
+import { HttpClientModule } from '@angular/common/http';
+import { ImageSearchComponent } from './image-search/image-search.component'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -40,13 +43,16 @@ import { CartService } from './cart.service';
     ItemAddedComponent,
     ShoppingCartIconComponent,
     ShoppingCartComponent,
-    SearchIconComponent
+    SearchIconComponent,
+    ImageSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
   ],
   providers: [CartService],
   bootstrap: [AppComponent]

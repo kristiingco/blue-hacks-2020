@@ -123,3 +123,65 @@ function handleError(res, reason, message, code) {
         }
     });
   });
+
+const deepai = require('deepai');
+deepai.setApiKey('8de794df-a945-49c8-8bc2-04d3b2fd7f60');
+
+app.get("/api/compareImages", async function(req, res){
+    var image1 = req.query.image1;
+    var image2 = req.query.image2;
+    try {
+        var resp = await deepai.callStandardApi("image-similarity", {
+            image1: image1,
+            image2: image2,
+          });
+        res.status(200).json(resp);
+    } catch (err) {
+        handleError(res, err.message, "DeepAI Error");
+    }
+});
+
+  /*  "/api/compareImageList"
+   *    GET: returns the closest product to the image sent
+
+   *    Required Params: 
+   *    image = url string of user image sent
+   *    image_list = list of url strings to be compared
+   *    product_id_list = list of product ids 
+   *    
+   *    Return: JSON of {image_id:x, product_id:y, distance:z}
+   * 
+   *    NOTE:
+   *    image_list and product_id_list must be same length
+   *    image_list[0] must correspond to product_id_list[0] and so on
+   */
+
+app.get("/api/compareImageList", async function(req, res){
+    var image = req.query.image;
+    var imageList = req.query.image_list.split(',');
+    var productIdList = req.query.product_id_list.split(',');
+    var productList = new Object();
+    productList.data = [];
+
+    try {
+        for(var i = 0; i < imageList.length; i++){
+                var resp = await deepai.callStandardApi("image-similarity", {
+                    image1: image,
+                    image2: imageList[i],
+                });
+                productList["data"].push({image_id: imageList[i], product_id: productIdList[i], distance: resp.output.distance});
+        }
+        console.log(productList);
+        productList["data"].sort(function(a, b){
+            return a.distance - b.distance;
+        });
+        res.status(200).json(productList["data"][0]);
+        
+    }
+    catch (err) {
+        console.log("BYE");
+        handleError(res, err.message, "DeepAI Error");
+    }
+});
+
+
