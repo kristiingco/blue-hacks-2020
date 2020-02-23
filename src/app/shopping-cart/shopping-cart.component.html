@@ -1,7 +1,7 @@
 <app-back-button></app-back-button>
 
 
-<h1>My Cart</h1>
+<h1 class="title">My Cart</h1>
     
   <!-- <div class="list-group">
     <div class="list-group-item" *ngFor="let product of cart">
@@ -11,15 +11,16 @@
     </div> -->
 <!-- <div class="main-div"> -->
     <div class="cart-list" *ngFor="let product of cart">
-    <mat-card class="example-card" layout="row" layout-align="center center">
-        
-        <img mat-card-image src={{product.img_url}}> 
-        <mat-card-title>{{product.name}}</mat-card-title>
-        <mat-card-subtitle>{{product.price}}</mat-card-subtitle>
-        <mat-card-actions>
-        <button mat-button>-</button> {{product.qty_ordered}} <button mat-button>+</button>
-        </mat-card-actions>
-    </mat-card>
+    <div class="product">
+        <img src={{product.img_url}}> 
+        <div style="display:flex; flex-direction: column; margin-left: 10px;">
+        <h1>{{product.name}}</h1>
+        <span>P{{product.price}}</span>
+        <div style="display: flex; justify-content: space-between;">
+        <button>-</button> {{product.qty_ordered}} <button mat-button>+</button>
+        </div>
+        </div>
+    </div>
     </div>
 <!-- </div> -->
 

@@ -4,11 +4,26 @@
     display: block;
 }
 
+.title {
+  text-align: center;
+  margin-top: -30px;
+  color: white;
+}
+
 img {
     width: 100px;
     height: 100px;
 }
 
+.product {
+  padding: 20px;
+  display: flex;
+  background-color: white;
+}
+
+.product > h1 {
+  display: inline;
+}
 .example-card {
     max-width: relative;
     max-height: 200px;
