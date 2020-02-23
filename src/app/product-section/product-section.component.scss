@@ -1,0 +1,23 @@
+body {
+    height: 100%;
+}
+
+div {
+    background-color: #fa7921;
+    margin-top: 10px;
+    padding: 18px;
+    margin: -10px;
+    min-height: 500px;
+    height: auto !important;
+    color: white;
+    display: block;
+
+}
+
+span {
+    margin-top: 5px;
+}
+
+div > h1 {
+    text-align: center;
+}

@@ -10,6 +10,18 @@ import { ArtisanComponent } from './artisan/artisan.component';
 import { ArtisanHeaderComponent } from './artisan-header/artisan-header.component';
 import { BackButtonComponent } from './back-button/back-button.component';
 import { ArtisanDescriptionComponent } from './artisan-description/artisan-description.component';
+import { ProductSectionComponent } from './product-section/product-section.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductPageComponent } from './product-page/product-page.component';
+import { AddToCartButtonComponent } from './add-to-cart-button/add-to-cart-button.component';
+import { ItemAddedComponent } from './item-added/item-added.component';
+import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import { ShoppingCartIconComponent } from './shopping-cart-icon/shopping-cart-icon.component';
+import { HttpClientModule } from '@angular/common/http'; 
+import { MatCardModule } from '@angular/material/card';
+import { SearchIconComponent } from './search-icon/search-icon.component';
+import { CartService } from './cart.service';
+
 
 @NgModule({
   declarations: [
@@ -20,13 +32,23 @@ import { ArtisanDescriptionComponent } from './artisan-description/artisan-descr
     ArtisanComponent,
     ArtisanHeaderComponent,
     BackButtonComponent,
-    ArtisanDescriptionComponent
+    ArtisanDescriptionComponent,
+    ProductSectionComponent,
+    ProductCardComponent,
+    ProductPageComponent,
+    AddToCartButtonComponent,
+    ItemAddedComponent,
+    ShoppingCartIconComponent,
+    ShoppingCartComponent,
+    SearchIconComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,9 @@
+<div>
+    <app-back-button></app-back-button>
+    <img src={{currentProduct.img_url}}>
+    <h1>{{currentProduct.name}}</h1>
+    <span>P{{currentProduct.price}}</span>
+    <p>{{currentProduct.description}}</p>
+    <app-add-to-cart-button (click)="addItem()"></app-add-to-cart-button>
+
+    </div>

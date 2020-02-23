@@ -1,0 +1,19 @@
+
+app-artisan-header {
+    z-index: 99999;
+    position: relative;
+}
+
+img {
+    width: 110%;
+    margin: 0 auto;
+    z-index: -1000000;
+    margin-left: -20px;
+    margin-top: -20px;
+    position: relative;
+}
+
+app-artisan-description {
+    z-index: 9999;
+    position: relative;
+}
