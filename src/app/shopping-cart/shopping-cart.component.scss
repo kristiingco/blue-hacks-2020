@@ -45,12 +45,34 @@ img {
   }
 
   .pay-button {
+    position: relative;
+    top: 10px;
     background-color: #9bc53d;
     text-align: center;
     border-radius: 30px;
     padding: 15px;
     font-size: 20px;
 }
+
+.change-button{
+    position: relative;
+    // left: 200px;
+    // background-color: green;
+    // text-align: center;
+    // height: 10px;
+    // border-radius: 30px;
+    // padding: 15px;
+    // font-size: 15px;
+    float: right;
+    left: 100px;
+    background-color: green;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 15px;
+    border-radius: 30px;
+    
+}
+
 
 
   
