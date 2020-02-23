@@ -5,11 +5,23 @@ body {
 }
 div {
     background-color: #5bc0eb;
-    min-height: 720px;
+    min-height: 730px;
     height: auto !important;
     padding: -10px;
     
  
+}
+
+app-search-icon {
+    position: absolute;
+    left: -5px;
+    top: 15px;
+}
+
+app-shopping-cart-icon {
+    position: absolute;
+    left: 400px;
+    top: 15px;
 }
 
 .first {
