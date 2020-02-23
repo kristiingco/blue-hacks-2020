@@ -15,7 +15,10 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { ProductPageComponent } from './product-page/product-page.component';
 import { AddToCartButtonComponent } from './add-to-cart-button/add-to-cart-button.component';
 import { ItemAddedComponent } from './item-added/item-added.component';
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { ImageSearchComponent } from './image-search/image-search.component'; 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,12 +35,15 @@ import { HttpClientModule } from '@angular/common/http';
     ProductCardComponent,
     ProductPageComponent,
     AddToCartButtonComponent,
-    ItemAddedComponent
+    ItemAddedComponent,
+    ImageSearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

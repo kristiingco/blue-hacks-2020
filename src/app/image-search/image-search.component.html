@@ -1,0 +1,26 @@
+<div class="container">
+<app-back-button></app-back-button>
+
+<div class="hook">
+    Want a local product similar to another?
+</div>
+
+<div class="subtitle">Type in a URL to an image below and find a local product similar to it!</div>
+<div>
+    
+   
+<div class="inputs">
+    <input type="text" [formControl]="inputControl" id="input">
+    <button (click)="onClick($event)">Submit</button>
+</div>
+    <input class="image" type="hidden" [formControl]="outputControl" id="output">
+   <div async *ngIf="clicked && !outputUrl">
+       <img class="spinner" src="https://i.imgur.com/xfRh3Zj.gif">
+   </div>
+   <div async *ngIf="outputUrl">
+       <div style="text-align: center; margin-top: 15px;">We found you a similar product! Click the image for more details.</div>
+       <img class="product" src={{outputUrl}} [routerLink]="['/product', outputId]">
+   </div>
+
+  </div>
+</div>
