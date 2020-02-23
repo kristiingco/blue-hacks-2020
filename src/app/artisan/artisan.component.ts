@@ -15,6 +15,7 @@ export class ArtisanComponent implements OnInit {
   artisanName;
   artisanDescription;
   artisanProducts;
+  artisanImage;
 
   ngOnInit(): void {
     this._Activatedroute.paramMap.subscribe(params => {
@@ -23,6 +24,7 @@ export class ArtisanComponent implements OnInit {
     this.artisanService.getArtisan(this.id).subscribe((data: any[]) => {
     this.artisanName = data['artisan_name'];
     this.artisanDescription = data['artisan_description'];
+    this.artisanImage= data['artisan_image_url'];
   });
 
     this.artisanService.getArtisanProducts(this.id).subscribe((data: any[]) => {
